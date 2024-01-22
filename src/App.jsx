@@ -17,19 +17,27 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if(window.scrollY === 0) setIsTopOfPage(true);
+      if (window.scrollY === 0) setIsTopOfPage(true);
       else setIsTopOfPage(false);
-    }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [])
+  }, []);
 
   return (
     <div>
-      <Navbar isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage} className="" />
+      <Navbar
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+        className=""
+      />
       <div>
         {isAboveMediumScreens && (
-          <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+          <DotGroup
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
         )}
         <Landing setSelectedPage={setSelectedPage} />
       </div>
@@ -51,7 +59,7 @@ function App() {
       </div>
       <Footer />
     </div>
-    )
+  );
 }
 
 export default App;
