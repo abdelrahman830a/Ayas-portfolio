@@ -35,13 +35,13 @@ const MySkills = () => {
           {isAboveMediumScreens ? (
             <div className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10  before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]">
               <img
-                src="assets/skills-image.png"
+                src="../assets/skills-image.png"
                 alt="skills"
                 className="z-10"
               />
             </div>
           ) : (
-            <img src="assets/skills-image.png" alt="skills" className="z-10" />
+            <img src="../assets/skills-image.png" alt="skills" className="z-10" />
           )}
         </div>
       </div>

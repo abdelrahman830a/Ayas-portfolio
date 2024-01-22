@@ -18,7 +18,6 @@ const Link = ({ page, selectedPage, setSelectedPage, setIsMenuToggled }) => {
       }}
       scrolling="true"
       duration="500"
-      smooth={true}
       >
       {page}
     </AnchorLink>
